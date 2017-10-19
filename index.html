@@ -108,12 +108,12 @@
                     document.getElementById('user').innerHTML ="Hello :" +  response.name;
                      document.getElementById('userid').innerHTML = "Your User ID is :" + response.id;
                       document.getElementById('gender').innerHTML = "Your :" + response.gender;
-                       //document.getElementById('device').innerHTML = "Your Using :" + response.devices.os;
+                       document.getElementById('device').innerHTML = "Your Using :" + response.devices[0].os + " Device";
                          document.getElementById('about').innerHTML = "About You :" + response.about;
                           // document.getElementById('device').innerHTML = "Your HomeTown :" + response.hometown.name;
 
                     
-                    console.log(response.devices[0].os)
+                    console.log(response)
                 }
             );  
                      var x = document.getElementById("frnd");

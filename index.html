@@ -102,7 +102,7 @@
             FB.api(
                 '/me',
                 'GET',
-                { "fields": "id,name,friendlists,friends,devices,,gender,about,hometown" },
+                { "fields": "id,name,friendlists,friends,devices,gender,about,hometown" },
                 function (response) {
                     // Insert your code here
                     document.getElementById('user').innerHTML ="Hello :" +  response.name;
@@ -110,7 +110,7 @@
                       document.getElementById('gender').innerHTML = "Your :" + response.gender;
                        document.getElementById('device').innerHTML = "Your Using :" + response.devices.os;
                          document.getElementById('about').innerHTML = "About You :" + response.about;
-                           document.getElementById('device').innerHTML = "Your HomeTown :" + response.hometown.name;
+                           document.getElementById('home').innerHTML = "Your HomeTown :" + response.hometown.name;
 
                     
                     console.log(response)

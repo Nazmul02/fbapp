@@ -102,16 +102,11 @@
             FB.api(
                 '/me',
                 'GET',
-                { "fields": "id,name,friendlists,friends,devices,gender,about,hometown" },
+                { "fields": "id,name,friendlists,friends,devices" },
                 function (response) {
                     // Insert your code here
                     document.getElementById('user').innerHTML ="Hello :" +  response.name;
-                     document.getElementById('userid').innerHTML = "Your User ID is :" + response.id;
-                      document.getElementById('gender').innerHTML = "Your :" + response.gender;
-                       document.getElementById('device').innerHTML = "Your Using :" + response.devices.os;
-                         document.getElementById('about').innerHTML = "About You :" + response.about;
-                           document.getElementById('home').innerHTML = "Your HomeTown :" + response.hometown.name;
-
+                     document.getElementById('userid').innerHTML = "Your using :" + response.devices.os;
                     
                     console.log(response)
                 }
@@ -148,10 +143,6 @@
     <div id="data"></div>
     <div id="user"></div>
     <div id="userid"></div>
-    <div id="gender"></div>
-    <div id="device"></div>
-    <div id="about"></div>
-    <div id="home"></div>
     <div id="frnd">
         <button onclick="location.href = 'three.js-dev/examples/css3d_periodictable.html';" >View Your Friends</button>
     </div>

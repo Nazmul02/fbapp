@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #Wrapper{
+               max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #Header{
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    #btn{
+        display: none;
+    }
+
+    button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+
+#frnd{
+    display: none;
+}
+
+    
+    </style>
+</head>
+<body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1601723849850614',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+
+            FB.getLoginStatus(function (response) {
+                 
+                console.log(response)
+                    if (response.status === 'connected') {
+                        console.log('Logged in.');
+                         document.getElementById('status').innerHTML = 'you are conected with facebook';
+                              var x = document.getElementById("btn");
+                                x.style.display = "block";
+                                 var x = document.getElementById("Statusbtn");
+                                    x.style.display = "none"; 
+                        
+                    }
+                    else if (response.status === 'not_authorized'){
+                        document.getElementById('status').innerHTML = 'you are not conected';
+                 
+                    }
+                    else {
+                        FB.login();
+                    }
+                });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+        function login(){
+                 var x = document.getElementById("btn");
+                 x.style.display = "none"; 
+            FB.login(function(response){
+                  
+                if (response.status === 'connected') {
+                 //   document.getElementById('status').innerHTML = 'you are conected with facebook';
+                     x.style.display = "block";  
+                }
+                else {
+                    document.getElementById('status').innerHTML = 'Please Login'; 
+                     x.style.display = "none";                   
+                }
+            });
+                  
+        }
+
+        function info(){
+          
+            FB.api(
+                '/me',
+                'GET',
+                { "fields": "id,name,friendlists,friends,devices" },
+                function (response) {
+                    // Insert your code here
+                    document.getElementById('user').innerHTML ="Hello :" +  response.name;
+                     document.getElementById('userid').innerHTML = "Your User ID is :" + response.id;
+                    
+                    console.log(response)
+                }
+            );  
+                     var x = document.getElementById("frnd");
+                        x.style.display = "block";
+        }
+
+
+        document.getElementById("lnk").onclick = function () {
+                location.href = "www.youtube.com";
+            };
+    </script>
+<div id="Wrapper">
+
+    <div id="Header">
+        <h1>Welcome to 3D Friendlist </h1>
+    </div>
+    
+    <div id="status">
+        
+    </div>
+    <div id="Statusbtn">
+        
+        <button onclick="login()">Login</button>
+        
+    </div>
+    <div id="btn">
+        
+        <button onclick="info()">View Your Informations</button>
+        
+    </div>
+    
+    <div id="data"></div>
+    <div id="user"></div>
+    <div id="userid"></div>
+    <div id="frnd">
+        <button onclick="location.href = 'three.js-dev/examples/css3d_periodictable.html';" >View Your Friends</button>
+    </div>
+    
+</div>
+</body>
+</html>

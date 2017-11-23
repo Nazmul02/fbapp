@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #Wrapper{
+               max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #Header{
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    #btn{
+        display: none;
+    }
+
+    button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+
+#frnd{
+    display: none;
+}
+
+    
+    </style>
+</head>
+<body>
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1601723849850614',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+
+            FB.getLoginStatus(function (response) {
+                 
+                console.log(response)
+                    if (response.status === 'connected') {
+                        console.log('Logged in.');
+                         document.getElementById('status').innerHTML = 'you are conected with facebook';
+                              var x = document.getElementById("btn");
+                                x.style.display = "block";
+                                 var x = document.getElementById("Statusbtn");
+                                    x.style.display = "none"; 
+                        
+                    }
+                    else if (response.status === 'not_authorized'){
+                        document.getElementById('status').innerHTML = 'you are not conected';
+                 
+                    }
+                    else {
+                        FB.login();
+                    }
+                });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+        function login(){
+                 var x = document.getElementById("btn");
+                 x.style.display = "none"; 
+            FB.login(function(response){
+                  
+                if (response.status === 'connected') {
+                 //   document.getElementById('status').innerHTML = 'you are conected with facebook';
+                     x.style.display = "block";  
+                }
+                else {
+                    document.getElementById('status').innerHTML = 'Please Login'; 
+                     x.style.display = "none";                   
+                }
+            });
+                  
+        }
+
+        function info(){
+          
+            FB.api(
+                '/me',
+                'GET',
+                { "fields": "id,name,friendlists,friends,devices,gender,about,hometown" },
+                function (response) {
+                    // Insert your code here
+                    document.getElementById('user').innerHTML ="Hello :" +  response.name;
+                     document.getElementById('userid').innerHTML = "Your User ID is :" + response.id;
+                      document.getElementById('gender').innerHTML = "Your :" + response.gender;
+                       document.getElementById('device').innerHTML = "Your Using :" + response.devices[0].os + " Device";
+                         document.getElementById('about').innerHTML = "About You :" + response.about;
+                          // document.getElementById('device').innerHTML = "Your HomeTown :" + response.hometown.name;
+
+                    
+                    console.log(response)
+                }
+            );  
+                     var x = document.getElementById("frnd");
+                        x.style.display = "block";
+        }
+
+
+        document.getElementById("lnk").onclick = function () {
+                location.href = "www.youtube.com";
+            };
+    </script>
+
+<div id="Wrapper">
+
+    <div id="Header">
+        <h1>Welcome to 3D Friendlist </h1>
+    </div>
+    
+    <div id="status">
+        
+    </div>
+    <div id="Statusbtn">
+        
+        <button onclick="login()">Login</button>
+        
+    </div>
+    <div id="btn">
+        
+        <button onclick="info()">View Your Informations</button>
+        
+    </div>
+    
+    <div id="data"></div>
+    <div id="user"></div>
+    <div id="userid"></div>
+    <div id="gender"></div>
+    <div id="device"></div>
+    <div id="about"></div>
+    <div id="home"></div>
+    <div id="frnd">
+        <button onclick="location.href = 'three.js-dev/examples/css3d_periodictable.html';" >View Your Friends</button>
+    </div>
+    
+</div>
+
+
+<div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=1854791507883056&amp;id=1269784479717098"
+    data-width="500" data-show-text="true">
+    <blockquote cite="https://www.facebook.com/permalink.php?story_fbid=1854791507883056&amp;id=1269784479717098" class="fb-xfbml-parse-ignore">
+        <p>Test</p>Posted by
+        <a href="https://www.facebook.com/Thee-Coold-Onee-1269784479717098/">Thee Coold Onee</a> on&nbsp;
+        <a href="https://www.facebook.com/permalink.php?story_fbid=1854791507883056&amp;id=1269784479717098">Wednesday, November 15, 2017</a>
+    <a href="https://www.facebook.com/plugins/confirm/post/like/popup/?token=S%3A_I1269784479717098%3A1854791507883056&href=https%3A%2F%2Fwww.facebook.com%2Fplugins%2Fpost%2Fasync%2Fembed%2Fdialog%2F%3Fno_preview%3D0%26source%3D1%26token%3DS%253A_I1269784479717098%253A1854791507883056%26url%3D%252Fpermalink.php%253Fstory_fbid%253D1854791507883056%2526id%253D1269784479717098%26ft%255Btn%255D%3DV-R-R%26ft%255Btop_level_post_id%255D%3D1854791507883056%26ft%255Btl_objid%255D%3D1854791507883056%26ft%255Bpage_id%255D%3D1269784479717098%26ft%255Bfbfeed_location%255D%3D5&iframe_referer=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D1854791507883056%26id%3D1269784479717098"></a>
+    </blockquote>
+</div>
+</body>
+</html>

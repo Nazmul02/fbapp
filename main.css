@@ -407,6 +407,13 @@ a{
         width: 90%;
     }
 
+    #Infopanel .Steps{
+        width: 80%;
+    }
+     #Infopanel .NewCafe{
+        width: 80%;
+    }
+ 
 #Infopanel #Cafes{
     width: 80%;
 }
@@ -452,6 +459,10 @@ a{
 }
 #Logo .team .center{
     display: none;
+}
+
+#panorama{
+    height: 300px;
 }
 }
 

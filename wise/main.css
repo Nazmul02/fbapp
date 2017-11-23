@@ -1,0 +1,457 @@
+@font-face {
+    font-family: LubalinGraph;
+    src: url(font/Lubalin-Graph-Bold.ttf);
+}
+@font-face {
+    font-family: Gotham;
+    src: url(font/Gotham-Narrow-Bold.otf);
+}
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'LubalinGraph';
+}
+#Wrapper .container{
+    /* max-width: 1000px; */
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+#Wrapper .wise-body{
+    background-image: url("img/background.jpg");
+    background-position: top;
+    margin-top: -4rem;
+    padding-top: 6rem;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Wrapper .wiseinfo-body{
+    background-image: url("img/background.jpg");
+    background-position: top;
+    margin-top: -4rem;
+    padding-top: 6rem;
+    text-align: center;
+    padding-bottom: 6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#Logo .wise-logo{
+    background-image: url("img/wiselogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 7rem;
+}
+
+#Logo .tags{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    font-size: 1rem;
+    
+}
+
+#Logo .tags .left{
+    flex: 1;
+    text-align: center;
+    
+}
+
+#Logo .tags .right{
+    flex: 1;
+    text-align: center;
+}
+
+#Text-Content{
+    text-align: center;
+}
+
+#Wrapper #Price{
+    background-image: url("img/price2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    background-position: center;
+}
+
+#Price .Price-text{
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+}
+/* #Price .price-image{
+    background-image: url("img/gopro.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 15rem;
+    background-position: center;
+} */
+#Footer .content{
+    /* background-image: url("img/footer.png");
+    background-size: cover;
+    padding-bottom: calc(38%); */
+    margin-bottom: -3rem;
+  
+}
+#Footer .bottom-chips{
+    margin-bottom: -1rem;
+    
+}
+
+.Gotham{
+    font-family: Gotham;
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 6px 7px 3px #412c14, 9px 2px 1px #6b4c2c;
+    
+}
+.button {
+    background-color:rgba(219, 197, 162, 0.69);
+    padding: 0 32px;
+    display: inline-block;
+  }
+
+.black-shadow{
+    text-shadow: 1px 1.8px 0px #090606, 1px -2px 0px #020101;
+     -webkit-text-stroke: 1px black;
+    color: #fff;
+}
+
+.brown-shadow{
+    text-shadow: -3px 2px 1px #472d0d, 2px 3px 1px #86633c;
+    -webkit-text-stroke: 1px #6d3d1a;
+    color: #fff; 
+}
+
+.light-brown-shadow{
+    text-shadow: -1px -2px 1px #917048, 0px 3px 1px #7d654b;
+    -webkit-text-stroke: 1px #976948;
+    color: #fff; 
+}
+
+.red-shadow{
+  text-shadow:   -5px 4px 10px #fff, 0 0 5px #fff;
+  color: red;
+}
+
+.small-font{
+    font-size: 1rem;
+}
+
+.medium-font{
+    font-size: 1.5rem;
+}
+
+.larg-font{
+    font-size: 2.5rem;
+}
+#Infopanel #Incafe {
+    width: 65%;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 3rem;
+}
+
+
+#Infopanel #Terms {
+    width: 65%;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 3rem;
+    text-align: left;
+    line-height: 2rem;
+    color: red;
+}
+
+#Infopanel #Terms .header{
+    text-align: center;
+    color: rgb(161, 150, 150);
+    padding: 2rem;
+}
+
+#Infopanel #Terms .red{
+    color: black;
+    padding-left: 2rem;
+    margin-top: -2rem;
+ 
+}
+
+#Infopanel #Cafes {
+    width: 50%;
+    min-height: 50rem;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+#Infopanel .Steps {
+    width: 65%;
+  text-align: left;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+
+}
+
+#Infopanel .NewCafe {
+    width: 65%;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 2rem;
+
+
+}
+ #panorama {
+            width: 100%;
+            height: 500px;
+        }
+#Infopanel .Steps .red{
+color: red;
+}
+#Infopanel .Steps .orange{
+color:rgb(255, 102, 0);
+}
+
+#Infopanel .Steps .blue{
+color: #0275d8;
+}
+
+#Infopanel #Incafe .red-border{
+    border-radius: 3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    align-content: center;
+    background-color: red;
+    color: #fff;
+}
+#Infopanel #Incafe .content{
+    display: flex;
+}
+#Infopanel #Incafe .content .left{
+    
+    display: inline-table;
+}
+
+#Infopanel #Incafe .content .right{
+    flex: 1;
+    
+}
+
+#Logo .cafe-logo{
+    display: flex;
+    color: red;
+}
+#Logo .cafe-logo .left{
+    flex: 1;
+    
+    text-align: right;
+}
+#Logo .cafe-logo .center{
+    flex: 1;
+}
+#Logo .cafe-logo .right{
+    flex: 1;
+    
+    text-align: left;
+}
+
+#Logo .team{
+    display: flex;
+}
+
+#Logo .team .left{
+    flex: 1;
+}
+#Logo .team .center{
+    flex: 1;
+    padding-top: 9rem;
+}
+
+#Logo .team .right{
+    flex: 1;
+}
+
+#Logo .rules .top{
+    display: inline-flex;
+}
+
+#Logo .rules .left{
+    background-image: url(img/how.png);
+    background-repeat: no-repeat;
+    background-size: 5rem;
+    background-position: right top;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+#Infopanel #Online{
+    width: 65%;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 3rem;
+    
+}
+
+#Infopanel #Online .red-border{
+    border-radius: 3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    align-content: center;
+    background-color: red;
+    color: #fff;
+}
+#Infopanel #Online .content{
+    display: flex;
+}
+#Infopanel #Online .content .left{
+    
+    display: inline-table;
+}
+
+#Infopanel #Online .content .right{
+    flex: 1;
+    
+}
+
+#Infopanel #Online .howtowin .like{
+    font-size: 1.5rem;
+    display: flex;
+    margin: auto;
+    width: 24rem;
+}
+#Infopanel #Online .howtowin .like img{
+    padding-top: 1.5rem;
+}
+
+.black{
+    color: black;
+}
+
+.blue{
+    color: #25aae1;
+}
+.red{
+    color: red;
+}
+
+#Infopanel #Online .search{
+    display: -webkit-inline-box;
+}
+
+
+#Infopanel #Online .socialmedia .fb{
+    display: -webkit-inline-box;
+    padding-left: 2rem
+}
+#Infopanel #Online .socialmedia img{
+    padding-top: 1rem;
+    padding-right: .5rem;
+}
+
+#Infopanel #Online .align-center .bottom{
+  
+    align-items: center;
+    display: flex;
+}
+
+#Infopanel #Online .align-center{
+    display: -webkit-inline-box;
+}
+
+    #Cafes .partners{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    #Cafes .partners .cafe{
+    flex: 0 0 50%;
+    padding-bottom: .5rem;
+    }
+
+    .round-border{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+      #Cafes .clues{
+    display: inline-block;
+    text-align: left;
+    font-size: 1.5rem;
+      }
+
+@media (max-width:500px){
+        #Wrapper #Price{
+        background-size: auto;
+        padding: 0;
+        
+    }  
+
+    #Cafes .partners .cafe img{
+        width: 90%;
+    }
+
+#Infopanel #Cafes{
+    width: 80%;
+}
+    #Infopanel #Incafe{
+        width: 80%;
+    }
+    #Infopanel #Online{
+        width: 80%;
+    }
+
+    #Infopanel #Online .align-center .bottom{
+    display: block;
+    width: 100%;
+    }
+
+
+    #Infopanel #Online .search{
+    display: block;
+    }
+
+    #Infopanel #Online .howtowin .like{
+    display: block;
+    font-size: 1.3rem;
+    width: auto;
+    }
+#Logo .cafe-logo{
+    display: block;
+}
+#Logo .cafe-logo .left{
+    text-align: center;
+}
+#Logo .cafe-logo .right{
+    text-align: center;
+}
+#Logo .rules .left{
+    background-image: none;
+}
+.small{
+    font-size: 1rem;
+}
+.medium{
+    font-size: 1.5rem;
+}
+#Logo .team .center{
+    display: none;
+}
+}
+

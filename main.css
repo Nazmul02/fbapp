@@ -201,6 +201,8 @@ html,body{
     background-color: #fff;
     padding: 1rem;
     border-radius: .5rem;
+    font-size: 1.3rem;
+    font-family: sans-serif;
 
 }
 
@@ -409,6 +411,7 @@ a{
 
     #Infopanel .Steps{
         width: 80%;
+
     }
      #Infopanel .NewCafe{
         width: 80%;

@@ -214,16 +214,22 @@ html,body{
     border-radius: .5rem;
     margin-top: 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #Infopanel .NewCafe .left{
     flex: 1;
     padding: 1rem;
+    /* flex-basis: 40%; */
+
 }
 
+.text-left{
+    text-align: left;
+}
 .vl {
-    border-left: 2px solid red;
-    /* height: 500px; */
+    border-right: 2px solid red;
+    height: 223px;
 }
 
 
@@ -415,7 +421,13 @@ a{
         padding: 0;
         
     }  
-
+.vl{
+    border-right: 0;
+    border-bottom: 2px solid red;
+    height: auto;
+    
+  
+}
     #Cafes .partners .cafe img{
         width: 90%;
     }
